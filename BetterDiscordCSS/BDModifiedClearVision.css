@@ -58,6 +58,18 @@
 }
 
 /* SETTINGS SIDEBAR ICONS */
+
+[aria-label=USER_SETTINGS] .sidebar-CFHs9e .item-PXvHYJ {
+  padding-left: 50px !important;
+}
+[aria-label=USER_SETTINGS] .sidebar-CFHs9e .item-PXvHYJ:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 15px;
+  margin-top: -2px;
+}
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=My-Account-tab].item-PXvHYJ:before {
   background-image: url('');
 }
@@ -126,4 +138,8 @@
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=logout-tab].item-PXvHYJ:before {
   background-image: url('');
+}
+.icon-Zc-uZZ,
+.icon-3Povsy {
+  margin-right: 15px;
 }
