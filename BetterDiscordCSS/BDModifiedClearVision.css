@@ -59,85 +59,79 @@
 
 /* SETTINGS SIDEBAR ICONS */
 
-[aria-label=USER_SETTINGS] .sidebar-CFHs9e .item-PXvHYJ {
-  padding-left: 50px !important;
-}
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e .item-PXvHYJ:before {
-  content: "";
   position: absolute;
   width: 24px;
   height: 24px;
-  left: 15px;
-  margin-top: -2px;
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=My-Account-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls="Privacy-&-Safety-tab"].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Authorized-Apps-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Connections-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Discord-Nitro-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Nitro-Server-Boost-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Library-Inventory-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Billing-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Appearance-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls="Voice-&-Video-tab"].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls="Text-&-Images-tab"].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Notifications-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Keybinds-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Language-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Windows-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Linux-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Streamer-Mode-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Advanced-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Game-Activity-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Overlay-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=changelog-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=Hypesquad-Online-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 [aria-label=USER_SETTINGS] .sidebar-CFHs9e [aria-controls=logout-tab].item-PXvHYJ:before {
-  background-image: url('');
+  background-image: url();
 }
 .icon-Zc-uZZ,
 .icon-3Povsy {
