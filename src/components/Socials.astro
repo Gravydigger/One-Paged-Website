@@ -1,0 +1,51 @@
+---
+import { Image } from "@astrojs/image/components";
+
+export interface Props {
+	icon: string;
+	alt: string;
+	text: string;
+	href: string;
+}
+
+const { icon, alt, text, href } = Astro.props;
+---
+
+<li class="social">
+	<a href={href}>
+		<div>
+			<Image
+				src={icon}
+				alt={alt}
+				aspectRatio="1:1"
+				height="24"
+				fit="fill"
+			/>
+		</div>
+		<p>{text}</p>
+	</a>
+</li>
+<style>
+	p {
+		margin: 0;
+		padding-left: 0.5em;
+		color: var(--text-color);
+	}
+	.social {
+		display: inline-block;
+		padding: 5% 2% 0 2%;
+	}
+	.social > a {
+		display: flex;
+		color: var(--text-color);
+	}
+	div {
+		background-color: var(--text-color);
+		border-radius: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 2em;
+		height: 2em;
+	}
+</style>

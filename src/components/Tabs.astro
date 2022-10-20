@@ -1,0 +1,39 @@
+---
+export interface Props {
+    title: string;
+    page: string;
+}
+
+const { title, page } = Astro.props;
+---
+
+<li class="tab">
+    <button id={page} onclick="changePage(this.id)"><h2>{title}</h2></button>
+</li>
+<style>
+    .tab {
+        list-style: none;
+        display: flex;
+        padding: 0.15rem;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 0.5rem 0.5rem 0 0;
+        justify-content: center;
+    }
+
+    .tab > button {
+        border: none;
+        background-color: transparent;
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    h2 {
+        color: var(--text-color);
+        margin: 0.5em;
+    }
+
+    .tab > button:hover > h2 {
+        color: var(--accent);
+    }
+</style>

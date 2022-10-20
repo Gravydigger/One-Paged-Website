@@ -1,0 +1,45 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/images/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<script src="/vanity.js" is:inline></script>
+	</head>
+	<body>
+		<slot />
+		<style is:global>
+			:root {
+				--accent: #203c56;
+				--text-color: #ffaa5e;
+				--accent-gradient: linear-gradient(
+					90deg,
+					var(--accent),
+					#ffaa5e,
+					var(--accent),
+					#ffaa5e
+				);
+			}
+			html {
+				font-family: system-ui, sans-serif;
+				background-image: url("/images/space-background.png");
+				background-color: #00172b;
+			}
+			body {
+				margin: 0;
+				height: 100vh;
+				display: flex;
+			}
+		</style>
+	</body>
+</html>

@@ -1,0 +1,159 @@
+---
+import { Image } from "@astrojs/image/components";
+
+import Layout from "../layouts/Layout.astro";
+import Tabs from "../components/Tabs.astro";
+import Socials from "../components/Socials.astro";
+
+import avatar from "../images/avatar.png";
+import twitter from "../images/social/twitter.svg";
+import youtube from "../images/social/youtube.svg";
+import github from "../images/social/github.svg";
+import steam from "../images/social/steam.svg";
+---
+
+<Layout title="🐺Gravy's Domain🐺">
+	<main>
+		<ul role="list" class="link-card-grid">
+			<Tabs title="About Me" page="about" />
+			<Tabs title="Finding Me" page="contact" />
+			<Tabs title="About Webpage" page="web" />
+		</ul>
+
+		<div class="content" id="contentAbout">
+			<Image src={avatar} alt="" height="256" aspectRatio="1:1" />
+			<div class="text">
+				<h1>Hi, I'm <span class="text-gradient">Gravydigger!</span></h1>
+				<h2>Though most just call me Gravy</h2>
+				<p>
+					I'm currently studying Computer Science, and create personal
+					SysAdmin & coding projects for fun! As a matter of fact,
+					this website was built by me as a personal project! I also
+					host D&amp;D sessions for a small group of friends weekly
+					using FoundryVTT.
+				</p>
+			</div>
+		</div>
+		<div class="content hidden" id="contentContact">
+			<div class="text" id="social">
+				<h1>Here's where to find me!</h1>
+				<Socials
+					icon={twitter}
+					alt="Twitter"
+					href="http://twitter.gravydigger.net"
+					text="@Gravydigger56"
+				/>
+				<Socials
+					icon={youtube}
+					alt="Youtube"
+					href="http://yt.gravydigger.net"
+					text="Gravydigger"
+				/>
+				<Socials
+					icon={github}
+					alt="Github"
+					href="http://github.gravydigger.net"
+					text="Gravydigger"
+				/>
+				<Socials
+					icon={steam}
+					alt="Steam"
+					href="http://steamcommunity.com/id/gravydigger"
+					text="Gravydigger"
+				/>
+			</div>
+		</div>
+		<div class="content hidden" id="contentWeb">
+			<div class="text" id="credit">
+				<ul>
+					<li>
+						Background made using <a
+							href="https://deep-fold.itch.io/space-background-generator"
+							>Space Background Generator</a>
+					</li>
+					<li>Avatar drawn by MochiiTeaa</li>
+					<li>Made using {Astro.generator}</li>
+				</ul>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 100ch;
+		min-width: 100ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	h2 {
+		font-size: 1.5em;
+		font-size: 800;
+		margin: 0;
+	}
+	#social {
+		width: 100%;
+		text-align: center;
+	}
+	#id > ul > li {
+		list-style: none;
+	}
+	.text {
+		padding: 1em;
+		color: var(--text-color);
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 300%;
+		animation: animateBG 2s infinite linear;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+	.content {
+		list-style: none;
+		display: flex;
+		padding: 0.15rem;
+		justify-content: center;
+		background-color: rgba(0, 0, 0, 0.6);
+		border-radius: 0 0 0.5rem 0.5rem;
+		background-position: 100%;
+		max-width: 100ch;
+	}
+	.hidden {
+		display: none;
+	}
+	ul {
+		margin-bottom: 0;
+	}
+	img {
+		border-radius: 100%;
+		padding: 1em;
+	}
+	li > a {
+		color: var(--text-color);
+	}
+
+	@keyframes animateBG {
+		0% {
+			background-position: 0, 0;
+		}
+		100% {
+			background-position: 100%, 0;
+		}
+	}
+
+	.counter {
+		width: fit-content;
+	}
+</style>
