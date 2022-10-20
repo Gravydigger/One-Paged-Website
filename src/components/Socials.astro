@@ -6,9 +6,10 @@ export interface Props {
 	alt: string;
 	text: string;
 	href: string;
+	size: string;
 }
 
-const { icon, alt, text, href } = Astro.props;
+const { icon, alt, text, href, size } = Astro.props;
 ---
 
 <li class="social">
@@ -18,7 +19,7 @@ const { icon, alt, text, href } = Astro.props;
 				src={icon}
 				alt={alt}
 				aspectRatio="1:1"
-				height="24"
+				height={size}
 				fit="fill"
 				format="png"
 			/>
