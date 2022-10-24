@@ -29,8 +29,8 @@ import kofi from "../images/social/kofi.png";
 		<div class="content" id="contentAbout">
 			<Image src={avatar} alt="" height="256" aspectRatio="1:1" />
 			<div class="text">
-				<h1>Hi, I'm <span class="text-gradient">Gravydigger!</span></h1>
-				<h2>Though most just call me Gravy</h2>
+				<h1 class="heading">Hi, I'm <span class="text-gradient">Gravydigger!</span></h1>
+				<h2 class="heading">Though most just call me Gravy</h2>
 				<p>
 					I'm an Australian furry currently studying Computer Science,
 					and create personal SysAdmin & coding projects for fun! As a
@@ -83,10 +83,9 @@ import kofi from "../images/social/kofi.png";
 		<div class="content hidden" id="contentWeb">
 			<div class="text" id="credit">
 				<ul>
-					<li>Made using {Astro.generator}</li>
-					<li>Avatar drawn by MochiiTeaa</li>
-					<li>Favicon drawn by RobynTheDragon</li>
+					<li>Made using <a href="https://astro.build/">{Astro.generator}</a></li>
 					<li>View source code on <a href="https://github.com/Gravydigger/Gravydigger.github.io">Github</a></li>
+					<li>Avatar & Favicon drawn by <a href="https://robynthedragon.carrd.co/">RobynTheDragon</a></li>
 					<li>Background made using <a href="https://deep-fold.itch.io/space-background-generator">Space Background Generator</a></li>
 				</ul>
 			</div>
@@ -103,13 +102,9 @@ import kofi from "../images/social/kofi.png";
 	}
 	h1 {
 		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
 	}
 	h2 {
 		font-size: 1.5em;
-		font-size: 800;
-		margin: 0;
 	}
 	#social {
 		width: 100%;
@@ -120,7 +115,11 @@ import kofi from "../images/social/kofi.png";
 	}
 	.text {
 		padding: 1em;
-		color: var(--text-color);
+		color: var(--accent-orange);
+	}
+	.heading {
+		font-weight: 800;
+		margin: 0;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -156,7 +155,7 @@ import kofi from "../images/social/kofi.png";
 		padding: 1em;
 	}
 	li > a {
-		color: var(--text-color);
+		color: var(--accent-orange);
 	}
 
 	@keyframes animateBG {

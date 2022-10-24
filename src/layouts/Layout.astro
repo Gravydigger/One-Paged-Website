@@ -44,14 +44,14 @@ const { title, desc, url, image } = Astro.props;
 		<slot />
 		<style is:global>
 			:root {
-				--accent: #203c56;
-				--text-color: #ffaa5e;
+				--accent-blue: #203c56;
+				--accent-orange: #ffaa5e;
 				--accent-gradient: linear-gradient(
 					90deg,
-					var(--accent),
-					#ffaa5e,
-					var(--accent),
-					#ffaa5e
+					var(--accent-blue),
+					var(--accent-orange),
+					var(--accent-blue),
+					var(--accent-orange)
 				);
 			}
 			html {
