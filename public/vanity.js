@@ -2,7 +2,7 @@ function onLoad() {
 
 	var header = document.getElementsByTagName("header")[0];
 
-	header.style.display = "none";
+	header.remove();
 }
 
 function changePage(clicked) {

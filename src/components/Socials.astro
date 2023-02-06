@@ -30,17 +30,28 @@ const { icon, alt, text, href, size } = Astro.props;
 <style>
 	p {
 		margin: 0;
-		padding-left: 0.5em;
-		color: var(--accent-orange);
+		font-weight: bold;
 	}
 	.social {
 		display: inline-block;
+
 		padding: 0 2% 0 2%;
 	}
 	.social > a {
 		display: flex;
+		align-items: center;
+		flex-direction: column;
 		color: var(--accent-orange);
+		text-decoration-line: none;
 	}
+
+	a:hover {
+		color: var(--accent-blue);
+	}
+	a:hover > div {
+		background-color: var(--accent-blue);
+	}
+
 	div {
 		background-color: var(--accent-orange);
 		border-radius: 100%;
