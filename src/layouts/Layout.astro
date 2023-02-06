@@ -3,7 +3,7 @@ export interface Props {
 	title: string;
 	desc: string;
 	url: string;
-	image: string
+	image: string;
 }
 
 const { title, desc, url, image } = Astro.props;
@@ -14,7 +14,7 @@ const { title, desc, url, image } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/images/favicon.png" />
+		<link rel="icon" type="image/png" href="/images/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<!-- Embed tags -->
 		<meta name="description" content="" />
@@ -33,14 +33,17 @@ const { title, desc, url, image } = Astro.props;
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={desc} />
 		<meta name="twitter:image" content={image} />
-		
+
 		<!-- Discord Meta Tags -->
 		<meta content="#ffaa5e" data-react-helmet="true" name="theme-color" />
-		
+
 		<title>{title}</title>
 		<script src="/vanity.js" is:inline></script>
 	</head>
-	<body>
+	<body onload="onLoad()">
+		<header>
+			<p>Make sure Javascript is enabled for the buttons to work!</p>
+		</header>
 		<slot />
 		<style is:global>
 			:root {
@@ -63,6 +66,21 @@ const { title, desc, url, image } = Astro.props;
 				margin: 0;
 				height: 100vh;
 				display: flex;
+			}
+			header {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				text-align: center;
+				background-color: var(--accent-orange);
+				color: var(--accent-blue);
+				font-weight: bold;
+			}
+
+			header > p {
+				
+				margin: 1ch;
+				
 			}
 		</style>
 	</body>
