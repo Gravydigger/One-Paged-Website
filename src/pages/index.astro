@@ -85,7 +85,7 @@ import kofi from "../images/social/kofi.png";
       <div class="text" id="credit">
         <ul>
           <li>
-            Made using <a href="https://astro.build/">{Astro.generator}</a>
+            Made using <a href="https://astro.build/">{Astro.generator}🚀</a>
           </li>
           <li>
             View source code on <a
@@ -130,6 +130,9 @@ import kofi from "../images/social/kofi.png";
   #id > ul > li {
     list-style: none;
   }
+  #social > h1 {
+    margin-top: 0;
+  }
   #social > ul {
     display: flex;
     justify-content: center;
@@ -142,6 +145,12 @@ import kofi from "../images/social/kofi.png";
   .heading {
     font-weight: 800;
     margin: 0;
+  }
+  #credit > ul > li {
+    text-align: center;
+    list-style: none;
+    font-size: 1.5em;
+    padding: 0.25em;
   }
   .text-gradient {
     background-image: var(--accent-gradient);
@@ -165,6 +174,8 @@ import kofi from "../images/social/kofi.png";
     border-radius: 0 0 0.5rem 0.5rem;
     background-position: 100%;
     max-width: 100ch;
+    height: 300px;
+    align-items: center;
   }
   .hidden {
     display: none;

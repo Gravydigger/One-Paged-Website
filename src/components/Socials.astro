@@ -14,7 +14,7 @@ const { icon, alt, text, href } = Astro.props;
 <li class="social">
   <a href={href}>
     <div>
-      <Image src={icon} alt={alt} height="24" format="png" />
+      <Image src={icon} alt={alt} height="34" format="png" />
     </div>
     <p>{text}</p>
   </a>
@@ -27,7 +27,7 @@ const { icon, alt, text, href } = Astro.props;
   .social {
     display: inline-block;
 
-    padding: 0 2% 0 2%;
+    padding: 0 4% 0 4%;
   }
   .social > a {
     display: flex;
@@ -37,7 +37,7 @@ const { icon, alt, text, href } = Astro.props;
     text-decoration-line: none;
   }
 
-  a:hover {
+  a:hover > p {
     color: var(--accent-blue);
   }
   a:hover > div {
@@ -50,7 +50,9 @@ const { icon, alt, text, href } = Astro.props;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 2em;
-    height: 2em;
+  }
+
+  div > img {
+    padding: 0.5em;
   }
 </style>
