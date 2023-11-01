@@ -1,87 +1,85 @@
 ---
 export interface Props {
-	title: string;
-	desc: string;
-	url: string;
-	image: string;
+  title: string;
+  desc: string;
+  url: string;
+  image: string;
 }
 
 const { title, desc, url, image } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/images/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<!-- Embed tags -->
-		<meta name="description" content="" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/images/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <!-- Embed tags -->
+    <meta name="description" content="" />
 
-		<!-- Facebook Meta Tags -->
-		<meta property="og:url" content={url} />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={desc} />
-		<meta property="og:image" content={image} />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:image" content={image} />
 
-		<!-- Twitter Meta Tags -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta property="twitter:domain" content="gravydigger.net" />
-		<meta property="twitter:url" content={url} />
-		<meta name="twitter:title" content={title} />
-		<meta name="twitter:description" content={desc} />
-		<meta name="twitter:image" content={image} />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="gravydigger.net" />
+    <meta property="twitter:url" content={url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={desc} />
+    <meta name="twitter:image" content={image} />
 
-		<!-- Discord Meta Tags -->
-		<meta content="#ffaa5e" data-react-helmet="true" name="theme-color" />
+    <!-- Discord Meta Tags -->
+    <meta content="#ffaa5e" data-react-helmet="true" name="theme-color" />
 
-		<title>{title}</title>
-		<script src="/vanity.js" is:inline></script>
-	</head>
-	<body onload="onLoad()">
-		<header>
-			<p>Make sure Javascript is enabled for the buttons to work!</p>
-		</header>
-		<slot />
-		<style is:global>
-			:root {
-				--accent-blue: #203c56;
-				--accent-orange: #ffaa5e;
-				--accent-gradient: linear-gradient(
-					90deg,
-					var(--accent-blue),
-					var(--accent-orange),
-					var(--accent-blue),
-					var(--accent-orange)
-				);
-			}
-			html {
-				font-family: system-ui, sans-serif;
-				background-image: url("/images/space-background.png");
-				background-color: #00172b;
-			}
-			body {
-				margin: 0;
-				height: 100vh;
-				display: flex;
-			}
-			header {
-				position: fixed;
-				top: 0;
-				width: 100%;
-				text-align: center;
-				background-color: var(--accent-orange);
-				color: var(--accent-blue);
-				font-weight: bold;
-			}
+    <title>{title}</title>
+    <script src="/vanity.js" is:inline></script>
+  </head>
+  <body onload="onLoad()">
+    <header>
+      <p>Make sure Javascript is enabled to change between tabs!</p>
+    </header>
+    <slot />
+    <style is:global>
+      :root {
+        --accent-blue: #203c56;
+        --accent-orange: #ffaa5e;
+        --accent-gradient: linear-gradient(
+          90deg,
+          var(--accent-blue),
+          var(--accent-orange),
+          var(--accent-blue),
+          var(--accent-orange)
+        );
+      }
+      html {
+        font-family: system-ui, sans-serif;
+        background-image: url("/images/space-background.png");
+        background-color: #00172b;
+      }
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+      }
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        text-align: center;
+        background-color: var(--accent-orange);
+        color: var(--accent-blue);
+        font-weight: bold;
+      }
 
-			header > p {
-				
-				margin: 1ch;
-				
-			}
-		</style>
-	</body>
+      header > p {
+        margin: 1ch;
+      }
+    </style>
+  </body>
 </html>

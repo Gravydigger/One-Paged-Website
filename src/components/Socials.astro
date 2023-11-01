@@ -1,64 +1,56 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 
 export interface Props {
-	icon: string;
-	alt: string;
-	text: string;
-	href: string;
-	size: string;
+  icon: ImageMetadata;
+  alt: string;
+  text: string;
+  href: string;
 }
 
-const { icon, alt, text, href, size } = Astro.props;
+const { icon, alt, text, href } = Astro.props;
 ---
 
 <li class="social">
-	<a href={href}>
-		<div>
-			<Image
-				src={icon}
-				alt={alt}
-				aspectRatio="1:1"
-				height={size}
-				fit="fill"
-				format="png"
-			/>
-		</div>
-		<p>{text}</p>
-	</a>
+  <a href={href}>
+    <div>
+      <Image src={icon} alt={alt} height="24" format="png" />
+    </div>
+    <p>{text}</p>
+  </a>
 </li>
 <style>
-	p {
-		margin: 0;
-		font-weight: bold;
-	}
-	.social {
-		display: inline-block;
+  p {
+    margin: 0;
+    font-weight: bold;
+  }
+  .social {
+    display: inline-block;
 
-		padding: 0 2% 0 2%;
-	}
-	.social > a {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		color: var(--accent-orange);
-		text-decoration-line: none;
-	}
+    padding: 0 2% 0 2%;
+  }
+  .social > a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--accent-orange);
+    text-decoration-line: none;
+  }
 
-	a:hover {
-		color: var(--accent-blue);
-	}
-	a:hover > div {
-		background-color: var(--accent-blue);
-	}
+  a:hover {
+    color: var(--accent-blue);
+  }
+  a:hover > div {
+    background-color: var(--accent-blue);
+  }
 
-	div {
-		background-color: var(--accent-orange);
-		border-radius: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 2em;
-		height: 2em;
-	}
+  div {
+    background-color: var(--accent-orange);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+  }
 </style>
