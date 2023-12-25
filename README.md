@@ -1,3 +1,5 @@
+## This originally was my website, which has now been replaced by a newer one at https://github.com/Gravydigger/Gravdigger.github.io
+---
 ![](/public/images/embed.png)
 
 # Welcome!
